@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPortfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/61a91a2a95.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header1">
+        <div class="container">
+            <nav >
+                <img src="images/logo.png" class="logo">
+                
+                <ul class="sidemenu">
+                    <li><a href="#header1">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="menuclose()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="menuopen()"></i>
+            </nav>
+            <div class="header1-text">
+                <p>Frontend Web Developer</p>
+                <h1>Hi, I'm <span>Mansi</span><br>Bhawsar from India</h1>
+            </div>
+        </div>
+
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about.jpg" class="photo">
+                </div>
+
+            
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p>Highly motivated front-end software engineer with exceptional teamwork and communication skills. 
+                    Collaborated with cross-functional teams to successfully deliver projects on time. Demonstrated
+                    brilliant interpersonal skills to effectively communicate complex ideas to both technical and 
+                    non-technical stakeholders. Proven ability to manage time efficiently and continuously learn new 
+                    technologies. Committed to delivering high-quality work and contributing to the success of the
+                    organization.</p>
+                <div class="tab-title">
+                    <!-- <p class="title-link" onclick="opentab('skills')">Skill</p>
+                    <p class="title-link" onclick="opentab('internship')">Internship</p>
+                    <p class="title-link" onclick="opentab('education')">Education</p> -->
+                    <p class="title-link " id="skill-link">Skill</p>
+                    <p class="title-link" id="internship-link">Internship</p>
+                    <p class="title-link" id="education-link">Education</p>
+                </div>
+                <div class="tab-contents  active-tab" id="skills">
+                    <ul>
+                        <li><span>Frontend Web development</span><br> HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>ReactJs</li>
+                        <li>OOP</li>
+                        <li>Git/Github</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="internship">
+                    <ul>
+                        <li><span>PiTricks E learning LLP</span> </li>
+                        <li>Creative Writing and Web page Creation</li>
+                        <li><span>Motion Cut</span> </li>
+                        <li>Web development Internship</li>
+                        
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>B.Tech(Hons.)</span><br>computer Science & Engineering <br>LNCT, Bhopal <br>2014-2018 <br>CGPA 8.10</li>
+                        <li> <span>Senior secondary(12th)</span> <br>Year of completion: 2014 <br>Percentage: 89.20%</li>
+                        <li> <span>Secondary(10th)</span><br>Year of completion: 2012 <br>Percentage: 92%</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="project-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>To-do App</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ad enim quia at eveniet, reprehenderit temporibus ducimus 
+                        illum inventore dolorum!</p>
+                    <a href="https://github.com/mansi1587/to-do-app"><i class="fa-solid fa-arrow-up-right-from-square sizelow"></i></a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>E-commerce webApp </h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ad enim quia at eveniet, reprehenderit temporibus ducimus 
+                        illum inventore dolorum!</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square sizelow"></i></a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-utensils"></i>
+                    <h2>Restuarent webApp</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ad enim quia at eveniet, reprehenderit temporibus ducimus 
+                        illum inventore dolorum!</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square sizelow"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>mansibhawsar4@gmail.com</p>
+                    <a href="images/MyResume.pdf" class="btn" download>Download CV</a>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-github"></i></a>
+                        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="name" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="Your email" required>
+                        <textarea name="textarea" rows="10" placeholder="Your message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright <span>&copy;</span> Mansi 2023  MyPortfolio website</p>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
