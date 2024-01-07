@@ -67,10 +67,12 @@
                 </div>
                 <div class="tab-contents" id="internship">
                     <ul>
-                        <li><span>PiTricks E learning LLP</span> </li>
-                        <li>Creative Writing and Web page Creation</li>
+                        <li><span>LearnFlow</span> </li>
+                        <li>ReactJs development intern</li>
+                        <li>1Dec2023 - 31Dec2023</li>
                         <li><span>Motion Cut</span> </li>
-                        <li>Web development Internship</li>
+                        <li>Web development Intern</li>
+                        <li>15Oct2023 - 15Nov2023 </li>
                         
                     </ul>
                 </div>
@@ -119,7 +121,7 @@
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
                     <p><i class="fa-solid fa-paper-plane"></i>mansibhawsar4@gmail.com</p>
-                    <a href="images/MyResume.pdf" class="btn" download>Download CV</a>
+                    <a href="images/MansiBhawsar_Resume.pdf" class="btn" download>Download CV</a>
                     <div class="social-icons">
                         <a href=""><i class="fa-brands fa-github"></i></a>
                         <a href=""><i class="fa-brands fa-x-twitter"></i></a>
@@ -129,12 +131,14 @@
                     
                 </div>
                 <div class="contact-right">
-                    <form>
-                        <input type="text" name="name" placeholder="Your name" required>
-                        <input type="email" name="email" placeholder="Your email" required>
-                        <textarea name="textarea" rows="10" placeholder="Your message"></textarea>
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="Email" placeholder="Your email" required>
+                        <textarea name="Message" rows="10" placeholder="Your message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
+                    <span id="msg"></span>
+
                 </div>
 
             </div>
@@ -145,5 +149,24 @@
     </div>
 
 <script src="script.js"></script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwtENJYQGE6GVjujYJNUkIlkarT-LlNO7FX53TIE7HhmGTh8f2sJCwaWaBa5gAgphYErQ/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(() => {
+            msg.innerHTML = ""
+        },5000);
+        form.reset()
+      }
+      )
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 </body>
 </html>
